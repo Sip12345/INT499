@@ -1,3 +1,5 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,13 +28,13 @@ h1 {
   margin-bottom: 1rem;
 }
 
-input {
+form input[type="text"] {
   padding: 0.5rem;
   width: 250px;
   margin-right: 0.5rem;
 }
 
-button {
+form button {
   padding: 0.5rem 1rem;
   background-color: #222;
   color: white;
@@ -40,6 +42,51 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+form button:hover {
   background-color: #555;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+li input[type="text"] {
+  width: 60%;
+  padding: 0.4rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+button i {
+  font-size: 1rem;
+  color: #444;
+}
+
+button:hover i.fa-check {
+  color: green;
+}
+
+button:hover i.fa-edit {
+  color: #007bff;
+}
+
+button:hover i.fa-trash-alt {
+  color: red;
 }
