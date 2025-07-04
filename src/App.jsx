@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar.jsx';
 import StreamList from './pages/StreamList.jsx';
 import Movies from './pages/Movies.jsx';
+import Subscriptions from './pages/Subscriptions.jsx';
 import Cart from './pages/Cart.jsx';
 import About from './pages/About.jsx';
 
@@ -13,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<StreamList />} />
         <Route path="/movies" element={<Movies />} />
+        <Route path="/subscriptions" element={<Subscriptions />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<About />} />
       </Routes>

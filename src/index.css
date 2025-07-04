@@ -19,18 +19,21 @@ body {
   font-weight: bold;
 }
 
-.streamlist-page,
-.movies-page,
-.cart-page,
-.about-page {
-  padding: 3rem;
-}
-
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
+/* Common page styles */
+.streamlist-page,
+.movies-page,
+.subscriptions-page,
+.cart-page,
+.about-page {
+  padding: 3rem;
+}
+
+/* StreamList Styles */
 form input[type="text"] {
   padding: 0.5rem;
   width: 250px;
@@ -94,7 +97,7 @@ button:hover i.fa-trash-alt {
   color: red;
 }
 
-/* Specific styles for Movies page */
+/* Movies page styles */
 .movies-page input {
   padding: 0.5rem;
   width: 250px;
@@ -124,5 +127,164 @@ button:hover i.fa-trash-alt {
   background: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
+
+/* Subscriptions page styles */
+.subscriptions-page .warning {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.product-card p {
+  margin: 0.25rem 0;
+}
+
+.product-card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #555;
+}
+
+.cart-page {
+  padding: 3rem;
+}
+
+.cart-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.empty-cart {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-item {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease-in-out;
+}
+
+.cart-item:hover {
+  transform: scale(1.01);
+}
+
+.cart-item-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cart-item-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.remove-btn {
+  background-color: #ffdddd;
+  color: #900;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #ffcccc;
+}
+
+.cart-item-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-item-controls button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #eee;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-item-controls span {
+  width: 32px;
+  text-align: center;
+}
+
+.cart-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-footer h3 {
+  font-size: 1.5rem;
+}
+
+.checkout-btn {
+  padding: 0.7rem 1.5rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.checkout-btn:hover {
+  background-color: #555;
+}
+

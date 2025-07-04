@@ -11,7 +11,7 @@ export default function Movies() {
     try {
       const res = await axios.get('https://api.themoviedb.org/3/search/movie', {
         params: {
-          api_key:
+          api_key: 'f326b43d013cc566f0782814932d543a',
           query: query
         }
       });
