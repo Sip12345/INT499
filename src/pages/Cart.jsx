@@ -52,14 +52,15 @@ export default function Cart() {
                   <button
                     onClick={() => handleRemove(index)}
                     className="remove-btn"
+                    aria-label="Remove item"
                   >
                     ×
                   </button>
                 </div>
                 <div className="cart-item-controls">
-                  <button onClick={() => handleQuantityChange(index, -1)}>-</button>
+                  <button onClick={() => handleQuantityChange(index, -1)} aria-label="Decrease quantity">-</button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => handleQuantityChange(index, 1)}>+</button>
+                  <button onClick={() => handleQuantityChange(index, 1)} aria-label="Increase quantity">+</button>
                 </div>
               </li>
             ))}

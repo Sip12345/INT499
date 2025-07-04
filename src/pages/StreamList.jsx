@@ -57,7 +57,9 @@ export default function StreamList() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button type="submit">Add</button>
+        <button type="submit" disabled={!input.trim()} aria-label="Add new item">
+          Add
+        </button>
       </form>
 
       <ul>
@@ -70,7 +72,7 @@ export default function StreamList() {
                   value={editText}
                   onChange={(e) => setEditText(e.target.value)}
                 />
-                <button onClick={() => handleEditSubmit(index)}>
+                <button onClick={() => handleEditSubmit(index)} aria-label="Save edit">
                   <i className="fas fa-check"></i>
                 </button>
               </>
@@ -78,13 +80,13 @@ export default function StreamList() {
               <>
                 {item.text}
                 <div>
-                  <button onClick={() => handleComplete(index)} title="Mark Complete">
+                  <button onClick={() => handleComplete(index)} title="Mark Complete" aria-label="Mark complete">
                     <i className="fas fa-check"></i>
                   </button>
-                  <button onClick={() => handleEdit(index)} title="Edit">
+                  <button onClick={() => handleEdit(index)} title="Edit" aria-label="Edit item">
                     <i className="fas fa-edit"></i>
                   </button>
-                  <button onClick={() => handleDelete(index)} title="Delete">
+                  <button onClick={() => handleDelete(index)} title="Delete" aria-label="Delete item">
                     <i className="fas fa-trash-alt"></i>
                   </button>
                 </div>
