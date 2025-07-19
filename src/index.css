@@ -288,3 +288,59 @@ ul {
   background-color: #555;
 }
 
+.credit-card-page {
+  padding: 3rem;
+}
+
+.credit-card-page h1 {
+  margin-bottom: 1rem;
+}
+
+.credit-card-page form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.credit-card-page input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.credit-card-page button {
+  padding: 0.7rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.credit-card-page button:hover {
+  background-color: #555;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.login-page h1 {
+  margin-bottom: 1rem;
+}
+.navbar .logout-btn {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.navbar .logout-btn:hover {
+  text-decoration: underline;
+}
+

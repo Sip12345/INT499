@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState(() => {
@@ -36,7 +37,7 @@ export default function Cart() {
 
       {cartItems.length === 0 ? (
         <div className="empty-cart">
-          <p>Your cart is empty. Start adding some subscriptions or accessories!</p>
+          <p>Your cart is empty. Start adding subscriptions or accessories!</p>
         </div>
       ) : (
         <>
@@ -44,7 +45,11 @@ export default function Cart() {
             {cartItems.map((item, index) => (
               <li key={index} className="cart-item">
                 <div className="cart-item-header">
-                  <img src={item.img} alt={item.service} className="cart-item-img" />
+                  <img
+                    src={item.img}
+                    alt={item.service}
+                    className="cart-item-img"
+                  />
                   <div className="cart-item-info">
                     <strong>{item.service}</strong>
                     <p>${item.price.toFixed(2)}</p>
@@ -58,9 +63,19 @@ export default function Cart() {
                   </button>
                 </div>
                 <div className="cart-item-controls">
-                  <button onClick={() => handleQuantityChange(index, -1)} aria-label="Decrease quantity">-</button>
+                  <button
+                    onClick={() => handleQuantityChange(index, -1)}
+                    aria-label="Decrease quantity"
+                  >
+                    -
+                  </button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => handleQuantityChange(index, 1)} aria-label="Increase quantity">+</button>
+                  <button
+                    onClick={() => handleQuantityChange(index, 1)}
+                    aria-label="Increase quantity"
+                  >
+                    +
+                  </button>
                 </div>
               </li>
             ))}
@@ -68,7 +83,9 @@ export default function Cart() {
 
           <div className="cart-footer">
             <h3>Total: ${calculateTotal().toFixed(2)}</h3>
-            <button className="checkout-btn">Checkout</button>
+            <Link to="/creditcard">
+              <button className="checkout-btn">Proceed to Checkout</button>
+            </Link>
           </div>
         </>
       )}

@@ -12,6 +12,11 @@ export default function Navbar() {
     setCartCount(count);
   }, [location]);
 
+  const handleLogout = () => {
+    localStorage.removeItem('loggedIn');
+    window.location.href = '/login';
+  };
+
   return (
     <nav className="navbar">
       <Link to="/">StreamList</Link>
@@ -19,6 +24,9 @@ export default function Navbar() {
       <Link to="/subscriptions">Subscriptions</Link>
       <Link to="/cart">Cart ({cartCount})</Link>
       <Link to="/about">About</Link>
+      <button className="logout-btn" onClick={handleLogout}>
+        Logout
+      </button>
     </nav>
   );
 }
